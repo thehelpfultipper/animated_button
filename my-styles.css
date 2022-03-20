@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #18191C;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    transform: scale(2.4);
+    position:relative;
+}
+
+button {
+    padding: 20px 30px;   
+    letter-spacing: 0.2em;
+    background: transparent;
+    color: #295F6B;
+    border: 1px solid #21424D;
+    border-radius: 2px;
+}
+
+button:hover {
+    color: #50C8ED;
+    box-shadow: 0 0 5px #1C3A42;
+    
+}
+
+/* adding the border lines */
+
+#left-border {
+    height: 16px;
+    border-left: 1px solid #3D7D96;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    transition: top 0.2s ease-in-out;
+}
+
+#top-border {
+    width: 50px;
+    border-top: 1px solid #3D7D96;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    transition: left 0.2s ease-in-out;
+}
+
+#right-border {
+    height: 16px;
+    border-left: 1px solid #3D7D96;
+    position: absolute;
+    bottom: 15px;
+    right: 0px;
+    transition: bottom 0.2s ease-in-out;
+}
+
+#bottom-border {
+    width: 50px;
+    border-top: 1px solid #3D7D96;
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+    transition: right 0.2s ease-in-out;
+}
+
+/* button animation */
+
+#container:hover > #left-border {
+    top: 0px;
+    border-top-left-radius: 2px;
+}
+
+#container:hover > #right-border {
+    bottom: 0px;
+    border-bottom-right-radius: 2px;
+}
+
+#container:hover > #top-border {
+    left: 0px;
+    width: 16px;
+    border-top-left-radius: 2px;
+}
+
+#container:hover > #bottom-border {
+    right: 0px;
+    width: 16px;
+    border-top-left-radius: 2px;
+}
